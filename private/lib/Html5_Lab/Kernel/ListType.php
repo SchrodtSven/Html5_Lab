@@ -1,4 +1,6 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 /**
  *  Class handling list(s) as objects, offering fluent OOP interface
  * 
@@ -9,25 +11,41 @@
  * @since 2022-05-24
  */
 
- namespace SchrodtSven\Html5_Lab\Kernel;
+namespace SchrodtSven\Html5_Lab\Kernel;
+
+use SchrodtSven\Html5_Lab\Kernel\Dry\ArrayAccessTrait;
 use SchrodtSven\Html5_Lab\Kernel\Dry\IteratorTrait;
+use SchrodtSven\Html5_Lab\Kernel\Dry\StackOperationTrait;
+use SchrodtSven\Html5_Lab\Kernel\Dry\CallbackArrayTrait;
 
- class ListType implements \Iterator
- {
-    use IteratorTrait;
-    
-    public function __construct(private array $current = [], private array $backup = [])
-    {
-        
-    }
+class ListType implements \Iterator, \Countable, \ArrayAccess
+{
+   use IteratorTrait;
+   use ArrayAccessTrait;
+   use StackOperationTrait;
+   use CallbackArrayTrait;
 
-     public function raw(): array
-     {
-        return $this->current;
-     }
+   public function __construct(private array $current = [], private array $backup = [])
+   {
+   }
 
-     public static function createFromFile(string $fileName): self
-     {
-        return new self(file($fileName));
-     }
- }
+   public function raw(): array
+   {
+      return $this->current;
+   }
+
+   public static function createFromFile(string $fileName): self
+   {
+      return new self(file($fileName));
+   }
+
+   public function count(): int
+   {
+      return count($this->current);
+   }
+
+   public function join(string $glue): StringType
+   {
+      return new StringType(implode($glue, $this->current));
+   }
+}

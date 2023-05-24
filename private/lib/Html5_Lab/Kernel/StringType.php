@@ -1,4 +1,6 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 /**
  *  Class handling string(s) as objects, offering fluent OOP interface
  * 
@@ -9,13 +11,12 @@
  * @since 2022-05-24
  */
 
- namespace SchrodtSven\Html5_Lab\Kernel;
+namespace SchrodtSven\Html5_Lab\Kernel;
 
- class StringType implements \Stringable
- {
+class StringType implements \Stringable
+{
     public function __construct(private string $current = '', private string $backup = '')
     {
-        
     }
 
     public function __toString(): string
@@ -23,7 +24,7 @@
         return $this->current;
     }
 
-    public function replace(string $find, string $replace=''): self
+    public function replace(string $find, string $replace = ''): self
     {
         $this->save();
         $this->current = str_replace($find, $replace, $this->current);
@@ -44,13 +45,13 @@
 
 
     public function trim(): self
-    {   
+    {
         $this->save();
         $this->current = trim($this->current);
         return $this;
     }
 
-    public function quote(string $mark ='"'): self
+    public function quote(string $mark = '"'): self
     {
         $this->enclose($mark, $mark);
         return $this;
@@ -62,4 +63,24 @@
         $this->current = sprintf('%s%s%s', $start, $this->current, $end);
         return $this;
     }
- }
+
+    public function prepend(string|StringType $begin): self
+    {
+        $this->current = sprintf(
+            '%s%s',
+            $begin,
+            $this->current
+        );
+        return $this;
+    }
+
+    public function append(string|StringType $end): self
+    {
+        $this->current = sprintf(
+            '%s%s',
+            $this->current,
+            $end
+        );
+        return $this;
+    }
+}

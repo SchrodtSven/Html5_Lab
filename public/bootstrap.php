@@ -14,14 +14,8 @@ require_once 'private/lib/Html5_Lab/Autoload.php';
 use SchrodtSven\Html5_Lab\App\Config;
 use SchrodtSven\Html5_Lab\Kernel\StringType;
 use SchrodtSven\Html5_Lab\Kernel\ListType;
+use SchrodtSven\Html5_Lab\Kernel\Frontend\HtmlElement;
 
-$list =ListType::createFromFile('archive/html_elements');
-
-foreach($list as $item) {
-    echo (new StringType($item))
-        ->trim()
-        ->quote("'")
-        ->replace('<')
-        ->replace('>');
-    echo ', ';
-}
+$foo = new HtmlElement('h1', 'Foo');
+$foo->setAttribute('class', 'mee')->setAttribute('id', md5(date('Ymd')));
+echo $foo;

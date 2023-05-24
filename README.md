@@ -1,7 +1,7 @@
 # Html5_Lab
 
 ## Prologue 
-<p>This is just a personal <i class="pop">playground</i> for:</p>
+<p>This is just a personal <i>playground</i> for:</p>
   <ul>
     <li>HTML,</li>
     <li><i>contemporary</i> CSS</li>    
@@ -84,7 +84,8 @@ Testing features of HTML 5, CSS 3 &amp; contemporary ECMAScript APIs
 
 15 directories, 20 files
       24 text files.
-classified 19 files      19 unique files.                              
+classified 19 files
+      19 unique files.                              
        6 files ignored.
 
 github.com/AlDanial/cloc v 1.96  T=0.01 s (2007.0 files/s, 143447.4 lines/s)
@@ -99,6 +100,80 @@ XML                              1              0              0             16
 Bourne Shell                     2              1              5             14
 -------------------------------------------------------------------------------
 SUM:                            19            268            295            795
+-------------------------------------------------------------------------------
+PHPUnit 9.5.27 by Sebastian Bergmann and contributors.
+
+Runtime:       PHP 8.2.5
+Configuration: /Users/svenschrodt/projects/Html5_Lab/phpunit.xml
+
+...............................................................  63 / 101 ( 62%)
+......................................                          101 / 101 (100%)
+
+Time: 00:00.007, Memory: 22.39 MB
+
+OK (101 tests, 101 assertions)
+</code>
+</pre>
+.
+├── LICENSE
+├── README.md
+├── README_RAW.md
+├── gitit.sh
+├── phphttpd.sh
+├── phpunit.xml
+├── private
+│   ├── check
+│   ├── lib
+│   │   └── Html5_Lab
+│   │       ├── App
+│   │       │   └── Config.php
+│   │       ├── Autoload.php
+│   │       └── Kernel
+│   │           ├── Dry
+│   │           │   ├── ArrayAccessTrait.php
+│   │           │   ├── CallbackArrayTrait.php
+│   │           │   ├── IteratorTrait.php
+│   │           │   ├── MultiByteStringTrait.php
+│   │           │   └── StackOperationTrait.php
+│   │           ├── Frontend
+│   │           │   ├── HtmlAttributes.php
+│   │           │   ├── HtmlCollection.php
+│   │           │   ├── HtmlElement.php
+│   │           │   └── HtmlSyntax.php
+│   │           ├── ListType.php
+│   │           └── StringType.php
+│   └── test
+│       ├── App
+│       ├── Kernel
+│       │   └── StringTypeTest.php
+│       └── Test.php
+├── public
+│   ├── bootstrap.php
+│   ├── examples
+│   ├── index.html
+│   ├── script
+│   └── style
+│       └── main.css
+└── router.php
+
+16 directories, 25 files
+      32 text files.
+classified 27 files      27 unique files.                              
+       6 files ignored.
+
+github.com/AlDanial/cloc v 1.96  T=0.01 s (2089.3 files/s, 155923.5 lines/s)
+-------------------------------------------------------------------------------
+Language                     files          blank        comment           code
+-------------------------------------------------------------------------------
+PHP                             18            283            470            749
+Markdown                         2             34              0            211
+Text                             2             13              0            162
+HTML                             1              0              0             28
+CSS                              1              9              0             20
+XML                              1              0              0             16
+Bourne Shell                     2              1              5             14
+-------------------------------------------------------------------------------
+SUM:                            27            340            475           1200
 -------------------------------------------------------------------------------
 PHPUnit 9.5.27 by Sebastian Bergmann and contributors.
 
