@@ -12,7 +12,9 @@
         </ul>
     </li>
   </ul>
-  <p>-- <br><num>419.23</num> I am a <i>coffee<i>mug!</p>
+  <p>-- <br>
+  <strong><code><num>419.23</num> I am a <i>coffee<i>mug!</code></strong>
+  </p>
   
 ## Motivation
 Testing features of HTML 5, CSS 3 &amp; contemporary ECMAScript APIs
@@ -67,6 +69,9 @@ Testing features of HTML 5, CSS 3 &amp; contemporary ECMAScript APIs
 │   │           ├── ListType.php
 │   │           └── StringType.php
 │   └── test
+│       ├── App
+│       ├── Kernel
+│       │   └── StringTypeTest.php
 │       └── Test.php
 ├── public
 │   ├── bootstrap.php
@@ -77,229 +82,34 @@ Testing features of HTML 5, CSS 3 &amp; contemporary ECMAScript APIs
 │       └── main.css
 └── router.php
 
-13 directories, 19 files
-      23 text files.
-classified 18 files
-      18 unique files.                              
+15 directories, 20 files
+      24 text files.
+classified 19 files      19 unique files.                              
        6 files ignored.
 
-github.com/AlDanial/cloc v 1.96  T=0.01 s (1930.9 files/s, 141816.2 lines/s)
+github.com/AlDanial/cloc v 1.96  T=0.01 s (2007.0 files/s, 143447.4 lines/s)
 -------------------------------------------------------------------------------
 Language                     files          blank        comment           code
 -------------------------------------------------------------------------------
-PHP                             11            223            281            558
-Markdown                         2             28              0            139
+PHP                             12            230            290            574
+Markdown                         2             28              0            143
 HTML                             1              0              0             28
 CSS                              1              9              0             20
 XML                              1              0              0             16
 Bourne Shell                     2              1              5             14
 -------------------------------------------------------------------------------
-SUM:                            18            261            286            775
+SUM:                            19            268            295            795
 -------------------------------------------------------------------------------
 PHPUnit 9.5.27 by Sebastian Bergmann and contributors.
 
 Runtime:       PHP 8.2.5
 Configuration: /Users/svenschrodt/projects/Html5_Lab/phpunit.xml
 
-...............................................................  63 / 100 ( 63%)
-.....................................                           100 / 100 (100%)
+...............................................................  63 / 101 ( 62%)
+......................................                          101 / 101 (100%)
 
 Time: 00:00.007, Memory: 22.39 MB
 
-OK (100 tests, 100 assertions)
-</code>
-</pre>
-.
-├── LICENSE
-├── README.md
-├── README_RAW.md
-├── gitit.sh
-├── phphttpd.sh
-├── phpunit.xml
-├── private
-│   ├── check
-│   ├── lib
-│   │   └── Html5_Lab
-│   │       ├── App
-│   │       │   └── Config.php
-│   │       ├── Autoload.php
-│   │       └── Kernel
-│   │           ├── Dry
-│   │           │   ├── ArrayAccessTrait.php
-│   │           │   ├── IteratorTrait.php
-│   │           │   ├── MultiByteStringTrait.php
-│   │           │   └── StackOperationTrait.php
-│   │           ├── ListType.php
-│   │           └── StringType.php
-│   └── test
-│       └── Test.php
-├── public
-│   ├── bootstrap.php
-│   ├── examples
-│   ├── index.html
-│   ├── script
-│   └── style
-│       └── main.css
-└── router.php
-
-13 directories, 19 files
-      23 text files.
-classified 18 files
-      18 unique files.                              
-       6 files ignored.
-
-github.com/AlDanial/cloc v 1.96  T=0.01 s (1911.6 files/s, 147194.6 lines/s)
--------------------------------------------------------------------------------
-Language                     files          blank        comment           code
--------------------------------------------------------------------------------
-PHP                             11            223            281            558
-Markdown                         2             34              0            197
-HTML                             1              0              0             28
-CSS                              1              9              0             20
-XML                              1              0              0             16
-Bourne Shell                     2              1              5             14
--------------------------------------------------------------------------------
-SUM:                            18            267            286            833
--------------------------------------------------------------------------------
-PHPUnit 9.5.27 by Sebastian Bergmann and contributors.
-
-Runtime:       PHP 8.2.5
-Configuration: /Users/svenschrodt/projects/Html5_Lab/phpunit.xml
-
-...............................................................  63 / 100 ( 63%)
-.....................................                           100 / 100 (100%)
-
-Time: 00:00.008, Memory: 22.39 MB
-
-OK (100 tests, 100 assertions)
-</code>
-</pre>
-.
-├── LICENSE
-├── README.md
-├── README_RAW.md
-├── gitit.sh
-├── phphttpd.sh
-├── phpunit.xml
-├── private
-│   ├── check
-│   ├── lib
-│   │   └── Html5_Lab
-│   │       ├── App
-│   │       │   └── Config.php
-│   │       ├── Autoload.php
-│   │       └── Kernel
-│   │           ├── Dry
-│   │           │   ├── ArrayAccessTrait.php
-│   │           │   ├── IteratorTrait.php
-│   │           │   ├── MultiByteStringTrait.php
-│   │           │   └── StackOperationTrait.php
-│   │           ├── ListType.php
-│   │           └── StringType.php
-│   └── test
-│       └── Test.php
-├── public
-│   ├── bootstrap.php
-│   ├── examples
-│   ├── index.html
-│   ├── script
-│   └── style
-│       └── main.css
-└── router.php
-
-13 directories, 19 files
-      23 text files.
-classified 18 files
-      18 unique files.                              
-       6 files ignored.
-
-github.com/AlDanial/cloc v 1.96  T=0.01 s (1832.1 files/s, 147684.6 lines/s)
--------------------------------------------------------------------------------
-Language                     files          blank        comment           code
--------------------------------------------------------------------------------
-PHP                             11            223            281            558
-Markdown                         2             40              0            256
-HTML                             1              0              0             28
-CSS                              1              9              0             20
-XML                              1              0              0             16
-Bourne Shell                     2              1              5             14
--------------------------------------------------------------------------------
-SUM:                            18            273            286            892
--------------------------------------------------------------------------------
-PHPUnit 9.5.27 by Sebastian Bergmann and contributors.
-
-Runtime:       PHP 8.2.5
-Configuration: /Users/svenschrodt/projects/Html5_Lab/phpunit.xml
-
-...............................................................  63 / 100 ( 63%)
-.....................................                           100 / 100 (100%)
-
-Time: 00:00.007, Memory: 22.39 MB
-
-OK (100 tests, 100 assertions)
-</code>
-</pre>
-.
-├── LICENSE
-├── README.md
-├── README_RAW.md
-├── gitit.sh
-├── phphttpd.sh
-├── phpunit.xml
-├── private
-│   ├── check
-│   ├── lib
-│   │   └── Html5_Lab
-│   │       ├── App
-│   │       │   └── Config.php
-│   │       ├── Autoload.php
-│   │       └── Kernel
-│   │           ├── Dry
-│   │           │   ├── ArrayAccessTrait.php
-│   │           │   ├── IteratorTrait.php
-│   │           │   ├── MultiByteStringTrait.php
-│   │           │   └── StackOperationTrait.php
-│   │           ├── ListType.php
-│   │           └── StringType.php
-│   └── test
-│       └── Test.php
-├── public
-│   ├── bootstrap.php
-│   ├── examples
-│   ├── index.html
-│   ├── script
-│   └── style
-│       └── main.css
-└── router.php
-
-13 directories, 19 files
-      23 text files.
-classified 18 files      18 unique files.                              
-       6 files ignored.
-
-github.com/AlDanial/cloc v 1.96  T=0.01 s (1847.7 files/s, 155614.5 lines/s)
--------------------------------------------------------------------------------
-Language                     files          blank        comment           code
--------------------------------------------------------------------------------
-PHP                             11            223            281            558
-Markdown                         2             46              0            315
-HTML                             1              0              0             28
-CSS                              1              9              0             20
-XML                              1              0              0             16
-Bourne Shell                     2              1              5             14
--------------------------------------------------------------------------------
-SUM:                            18            279            286            951
--------------------------------------------------------------------------------
-PHPUnit 9.5.27 by Sebastian Bergmann and contributors.
-
-Runtime:       PHP 8.2.5
-Configuration: /Users/svenschrodt/projects/Html5_Lab/phpunit.xml
-
-...............................................................  63 / 100 ( 63%)
-.....................................                           100 / 100 (100%)
-
-Time: 00:00.007, Memory: 22.39 MB
-
-OK (100 tests, 100 assertions)
+OK (101 tests, 101 assertions)
 </code>
 </pre>
