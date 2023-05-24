@@ -45,52 +45,6 @@ Testing features of HTML 5, CSS 3 &amp; contemporary ECMAScript APIs
 │   │       ├── Autoload.php
 │   │       └── Kernel
 │   └── test
-├── public
-│   ├── bootstrap.php
-│   ├── examples
-│   ├── script
-│   └── style
-└── router.php
-
-12 directories, 9 files
-      12 text files.
-classified 8 files       8 unique files.                              
-       5 files ignored.
-
-github.com/AlDanial/cloc v 1.96  T=0.01 s (1104.4 files/s, 34926.1 lines/s)
--------------------------------------------------------------------------------
-Language                     files          blank        comment           code
--------------------------------------------------------------------------------
-PHP                              4             26             78             56
-Markdown                         1             11              0             46
-XML                              1              0              0             16
-Bourne Shell                     2              1              5             14
--------------------------------------------------------------------------------
-SUM:                             8             38             83            132
--------------------------------------------------------------------------------
-PHPUnit 9.5.27 by Sebastian Bergmann and contributors.
-
-Runtime:       PHP 8.2.5
-Configuration: /Users/svenschrodt/projects/Html5_Lab/phpunit.xml
-
-No tests executed!
-</code>
-</pre>
-.
-├── LICENSE
-├── README.md
-├── gitit.sh
-├── phphttpd.sh
-├── phpunit.xml
-├── private
-│   ├── check
-│   ├── lib
-│   │   └── Html5_Lab
-│   │       ├── App
-│   │       │   └── Config.php
-│   │       ├── Autoload.php
-│   │       └── Kernel
-│   └── test
 │       └── Test.php
 ├── public
 │   ├── bootstrap.php
@@ -104,16 +58,16 @@ No tests executed!
 classified 9 files       9 unique files.                              
        5 files ignored.
 
-github.com/AlDanial/cloc v 1.96  T=0.01 s (1364.7 files/s, 67324.8 lines/s)
+github.com/AlDanial/cloc v 1.96  T=0.01 s (1332.6 files/s, 58928.7 lines/s)
 -------------------------------------------------------------------------------
 Language                     files          blank        comment           code
 -------------------------------------------------------------------------------
 PHP                              5             35             98            171
-Markdown                         1             15              0             89
+Markdown                         1             11              0             47
 XML                              1              0              0             16
 Bourne Shell                     2              1              5             14
 -------------------------------------------------------------------------------
-SUM:                             9             51            103            290
+SUM:                             9             47            103            248
 -------------------------------------------------------------------------------
 PHPUnit 9.5.27 by Sebastian Bergmann and contributors.
 
