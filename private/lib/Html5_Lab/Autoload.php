@@ -80,6 +80,9 @@ class Autoload
         });
     }
 
+    /**
+     * Constructor function with workaround for 
+     */
     public function __construct()
     {
         // workaround for current PHP Development server -> if route eq '/'

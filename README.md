@@ -68,18 +68,18 @@ Testing features of HTML 5, CSS 3 &amp; contemporary ECMAScript APIs
 classified 18 files      18 unique files.                              
        6 files ignored.
 
-github.com/AlDanial/cloc v 1.96  T=0.01 s (1846.9 files/s, 133284.4 lines/s)
+github.com/AlDanial/cloc v 1.96  T=0.01 s (1758.7 files/s, 127701.2 lines/s)
 -------------------------------------------------------------------------------
 Language                     files          blank        comment           code
 -------------------------------------------------------------------------------
-PHP                             11            223            278            553
+PHP                             11            223            281            558
 Markdown                         2             27              0            125
 HTML                             1              0              0             28
 CSS                              1              9              0             20
 XML                              1              0              0             16
 Bourne Shell                     2              1              5             14
 -------------------------------------------------------------------------------
-SUM:                            18            260            283            756
+SUM:                            18            260            286            761
 -------------------------------------------------------------------------------
 PHPUnit 9.5.27 by Sebastian Bergmann and contributors.
 
@@ -89,7 +89,7 @@ Configuration: /Users/svenschrodt/projects/Html5_Lab/phpunit.xml
 ...............................................................  63 / 100 ( 63%)
 .....................................                           100 / 100 (100%)
 
-Time: 00:00.007, Memory: 22.39 MB
+Time: 00:00.008, Memory: 22.39 MB
 
 OK (100 tests, 100 assertions)
 </code>

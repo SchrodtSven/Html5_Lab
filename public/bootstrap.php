@@ -18,5 +18,10 @@ use SchrodtSven\Html5_Lab\Kernel\ListType;
 $list =ListType::createFromFile('archive/html_elements');
 
 foreach($list as $item) {
-    echo trim($item);
+    echo (new StringType($item))
+        ->trim()
+        ->quote("'")
+        ->replace('<')
+        ->replace('>');
+    echo ', ';
 }
