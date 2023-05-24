@@ -76,3 +76,55 @@ Configuration: /Users/svenschrodt/projects/Html5_Lab/phpunit.xml
 No tests executed!
 </code>
 </pre>
+.
+├── LICENSE
+├── README.md
+├── gitit.sh
+├── phphttpd.sh
+├── phpunit.xml
+├── private
+│   ├── check
+│   ├── lib
+│   │   └── Html5_Lab
+│   │       ├── App
+│   │       │   └── Config.php
+│   │       ├── Autoload.php
+│   │       └── Kernel
+│   └── test
+│       └── Test.php
+├── public
+│   ├── bootstrap.php
+│   ├── examples
+│   ├── script
+│   └── style
+└── router.php
+
+12 directories, 10 files
+      13 text files.
+classified 9 files       9 unique files.                              
+       5 files ignored.
+
+github.com/AlDanial/cloc v 1.96  T=0.01 s (1364.7 files/s, 67324.8 lines/s)
+-------------------------------------------------------------------------------
+Language                     files          blank        comment           code
+-------------------------------------------------------------------------------
+PHP                              5             35             98            171
+Markdown                         1             15              0             89
+XML                              1              0              0             16
+Bourne Shell                     2              1              5             14
+-------------------------------------------------------------------------------
+SUM:                             9             51            103            290
+-------------------------------------------------------------------------------
+PHPUnit 9.5.27 by Sebastian Bergmann and contributors.
+
+Runtime:       PHP 8.2.5
+Configuration: /Users/svenschrodt/projects/Html5_Lab/phpunit.xml
+
+...............................................................  63 / 100 ( 63%)
+.....................................                           100 / 100 (100%)
+
+Time: 00:00.007, Memory: 22.39 MB
+
+OK (100 tests, 100 assertions)
+</code>
+</pre>
