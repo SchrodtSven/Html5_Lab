@@ -3,17 +3,16 @@
 ## Prologue 
 <p>This is just a personal <i class="pop">playground</i> for:</p>
   <ul>
-    <li><abbr title = "HyperText Markup Language">HTML</abbr> <num>5</num>,</li>
-    <li><i class="pop">contemporary</i> <abbr title = "Cascading Style Sheets">CSS</abbr></li>    
-    <li><i class="pop">contemporary</i> <abbr title = "European Computer Manufacturers Association">ECMA</abbr>Script</li>
-    <li><i class="pop">assisted</i>  by :
+    <li>HTML,</li>
+    <li><i>contemporary</i>CSS</li>    
+    <li><i>contemporary</i>ECMAScript</li>
+    <li><i>assisted</i>  by :
         <ul>
-            <li>some additional <abbr title = "PHP Hypertext Preprocessor">PHP</abbr> 8.2+ stuff</li>
+            <li>some additional PHP stuff</li>
         </ul>
     </li>
   </ul>
   <p><num>419.23</num> I am a <i>coffee<i>mug!</p>
-  <footer>Nuff said for now & Glück auf! <br>Sven</footer>
   
 ## Motivation
 Testing features of HTML 5, CSS 3 &amp; contemporary ECMAScript APIs
@@ -80,7 +79,8 @@ Testing features of HTML 5, CSS 3 &amp; contemporary ECMAScript APIs
 
 13 directories, 19 files
       23 text files.
-classified 18 files      18 unique files.                              
+classified 18 files
+      18 unique files.                              
        6 files ignored.
 
 github.com/AlDanial/cloc v 1.96  T=0.01 s (1930.9 files/s, 141816.2 lines/s)
@@ -105,6 +105,70 @@ Configuration: /Users/svenschrodt/projects/Html5_Lab/phpunit.xml
 .....................................                           100 / 100 (100%)
 
 Time: 00:00.007, Memory: 22.39 MB
+
+OK (100 tests, 100 assertions)
+</code>
+</pre>
+.
+├── LICENSE
+├── README.md
+├── README_RAW.md
+├── gitit.sh
+├── phphttpd.sh
+├── phpunit.xml
+├── private
+│   ├── check
+│   ├── lib
+│   │   └── Html5_Lab
+│   │       ├── App
+│   │       │   └── Config.php
+│   │       ├── Autoload.php
+│   │       └── Kernel
+│   │           ├── Dry
+│   │           │   ├── ArrayAccessTrait.php
+│   │           │   ├── IteratorTrait.php
+│   │           │   ├── MultiByteStringTrait.php
+│   │           │   └── StackOperationTrait.php
+│   │           ├── ListType.php
+│   │           └── StringType.php
+│   └── test
+│       └── Test.php
+├── public
+│   ├── bootstrap.php
+│   ├── examples
+│   ├── index.html
+│   ├── script
+│   └── style
+│       └── main.css
+└── router.php
+
+13 directories, 19 files
+      23 text files.
+classified 18 files      18 unique files.                              
+       6 files ignored.
+
+github.com/AlDanial/cloc v 1.96  T=0.01 s (1911.6 files/s, 147194.6 lines/s)
+-------------------------------------------------------------------------------
+Language                     files          blank        comment           code
+-------------------------------------------------------------------------------
+PHP                             11            223            281            558
+Markdown                         2             34              0            197
+HTML                             1              0              0             28
+CSS                              1              9              0             20
+XML                              1              0              0             16
+Bourne Shell                     2              1              5             14
+-------------------------------------------------------------------------------
+SUM:                            18            267            286            833
+-------------------------------------------------------------------------------
+PHPUnit 9.5.27 by Sebastian Bergmann and contributors.
+
+Runtime:       PHP 8.2.5
+Configuration: /Users/svenschrodt/projects/Html5_Lab/phpunit.xml
+
+...............................................................  63 / 100 ( 63%)
+.....................................                           100 / 100 (100%)
+
+Time: 00:00.008, Memory: 22.39 MB
 
 OK (100 tests, 100 assertions)
 </code>
