@@ -30,8 +30,6 @@ Testing features of HTML 5, CSS 3 &amp; contemporary ECMAScript APIs
 ### Files, Lines of Code & Unit Testing
 <pre>
 <code>
-
-
 .
 ├── LICENSE
 ├── README.md
@@ -55,24 +53,26 @@ Testing features of HTML 5, CSS 3 &amp; contemporary ECMAScript APIs
 └── router.php
 
 12 directories, 9 files
-      11 text files.
+      12 text files.
 classified 8 files       8 unique files.                              
-       4 files ignored.
+       5 files ignored.
 
-github.com/AlDanial/cloc v 1.96  T=0.01 s (1194.1 files/s, 38060.8 lines/s)
+github.com/AlDanial/cloc v 1.96  T=0.01 s (1104.4 files/s, 34926.1 lines/s)
 -------------------------------------------------------------------------------
 Language                     files          blank        comment           code
 -------------------------------------------------------------------------------
 PHP                              4             26             78             56
-Markdown                         1             13              0             46
+Markdown                         1             11              0             46
 XML                              1              0              0             16
 Bourne Shell                     2              1              5             14
 -------------------------------------------------------------------------------
-SUM:                             8             40             83            132
+SUM:                             8             38             83            132
 -------------------------------------------------------------------------------
 PHPUnit 9.5.27 by Sebastian Bergmann and contributors.
 
-Cannot open file "/Users/svenschrodt/projects/Html5_Lab/src/P7WikiFoo/App.php".
+Runtime:       PHP 8.2.5
+Configuration: /Users/svenschrodt/projects/Html5_Lab/phpunit.xml
 
+No tests executed!
 </code>
 </pre>
