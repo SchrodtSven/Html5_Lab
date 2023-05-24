@@ -1,2 +1,13 @@
-/cache/
-/config/development/
+# Local DEV & testing stuff
+.phpunit.result.cache
+archive
+cache
+dump
+phpunit
+foo.php
+foo.html
+foo.js
+foo.css
+foo.sh
+# Darwin stuff
+.DS_Store
