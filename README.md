@@ -33,6 +33,7 @@ Testing features of HTML 5, CSS 3 &amp; contemporary ECMAScript APIs
 .
 ├── LICENSE
 ├── README.md
+├── README_RAW.md
 ├── gitit.sh
 ├── phphttpd.sh
 ├── phpunit.xml
@@ -44,30 +45,41 @@ Testing features of HTML 5, CSS 3 &amp; contemporary ECMAScript APIs
 │   │       │   └── Config.php
 │   │       ├── Autoload.php
 │   │       └── Kernel
+│   │           ├── Dry
+│   │           │   ├── ArrayAccessTrait.php
+│   │           │   ├── IteratorTrait.php
+│   │           │   ├── MultiByteStringTrait.php
+│   │           │   └── StackOperationTrait.php
+│   │           ├── ListType.php
+│   │           └── StringType.php
 │   └── test
 │       └── Test.php
 ├── public
 │   ├── bootstrap.php
 │   ├── examples
+│   ├── index.html
 │   ├── script
 │   └── style
+│       └── main.css
 └── router.php
 
-12 directories, 10 files
-      13 text files.
-classified 9 files       9 unique files.                              
-       5 files ignored.
+13 directories, 19 files
+      23 text files.
+classified 18 files      18 unique files.                              
+       6 files ignored.
 
-github.com/AlDanial/cloc v 1.96  T=0.01 s (1332.6 files/s, 58928.7 lines/s)
+github.com/AlDanial/cloc v 1.96  T=0.01 s (1846.9 files/s, 133284.4 lines/s)
 -------------------------------------------------------------------------------
 Language                     files          blank        comment           code
 -------------------------------------------------------------------------------
-PHP                              5             35             98            171
-Markdown                         1             11              0             47
+PHP                             11            223            278            553
+Markdown                         2             27              0            125
+HTML                             1              0              0             28
+CSS                              1              9              0             20
 XML                              1              0              0             16
 Bourne Shell                     2              1              5             14
 -------------------------------------------------------------------------------
-SUM:                             9             47            103            248
+SUM:                            18            260            283            756
 -------------------------------------------------------------------------------
 PHPUnit 9.5.27 by Sebastian Bergmann and contributors.
 

@@ -12,5 +12,11 @@ declare(strict_types=1);
 
 require_once 'private/lib/Html5_Lab/Autoload.php';
 use SchrodtSven\Html5_Lab\App\Config;
+use SchrodtSven\Html5_Lab\Kernel\StringType;
+use SchrodtSven\Html5_Lab\Kernel\ListType;
 
-$foo = new Config;
+$list =ListType::createFromFile('archive/html_elements');
+
+foreach($list as $item) {
+    echo trim($item);
+}

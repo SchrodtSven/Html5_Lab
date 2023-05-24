@@ -11,3 +11,8 @@ foo.css
 foo.sh
 # Darwin stuff
 .DS_Store
+
+
+# Deployment stuff
+README_RAW.md
+ 

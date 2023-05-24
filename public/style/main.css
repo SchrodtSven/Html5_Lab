@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@200&display=swap');
+
+body {
+  font-family: 'Crimson Pro', serif;
+  
+}
+
+i.pop  {
+        quotes: "“" "”" "‘" "’";
+}      
+
+i.pop::before {
+        content: open-quote;
+}
+
+i.pop::after {
+        content: close-quote;
+}
+
+footer {
+        border-top: 1px dotted black;
+        padding-top: 1em;
+}
+
+h1 {
+    border-bottom: 0.1em solid black;
+    
+}
+
