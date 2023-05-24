@@ -1,5 +1,20 @@
 # Html5_Lab
 
+## Prologue 
+<p>This is just a personal <i class="pop">playground</i> for:</p>
+  <ul>
+    <li><abbr title = "HyperText Markup Language">HTML</abbr> <num>5</num>,</li>
+    <li><i class="pop">contemporary</i> <abbr title = "Cascading Style Sheets">CSS</abbr></li>    
+    <li><i class="pop">contemporary</i> <abbr title = "European Computer Manufacturers Association">ECMA</abbr>Script</li>
+    <li><i class="pop">assisted</i>  by :
+        <ul>
+            <li>some additional <abbr title = "PHP Hypertext Preprocessor">PHP</abbr> 8.2+ stuff</li>
+        </ul>
+    </li>
+  </ul>
+  <p><num>419.23</num> I am a <i>coffee<i>mug!</p>
+  <footer>Nuff said for now & Glück auf! <br>Sven</footer>
+  
 ## Motivation
 Testing features of HTML 5, CSS 3 &amp; contemporary ECMAScript APIs
 - to be assisted by some PHP code
@@ -68,18 +83,18 @@ Testing features of HTML 5, CSS 3 &amp; contemporary ECMAScript APIs
 classified 18 files      18 unique files.                              
        6 files ignored.
 
-github.com/AlDanial/cloc v 1.96  T=0.01 s (1758.7 files/s, 127701.2 lines/s)
+github.com/AlDanial/cloc v 1.96  T=0.01 s (1930.9 files/s, 141816.2 lines/s)
 -------------------------------------------------------------------------------
 Language                     files          blank        comment           code
 -------------------------------------------------------------------------------
 PHP                             11            223            281            558
-Markdown                         2             27              0            125
+Markdown                         2             28              0            139
 HTML                             1              0              0             28
 CSS                              1              9              0             20
 XML                              1              0              0             16
 Bourne Shell                     2              1              5             14
 -------------------------------------------------------------------------------
-SUM:                            18            260            286            761
+SUM:                            18            261            286            775
 -------------------------------------------------------------------------------
 PHPUnit 9.5.27 by Sebastian Bergmann and contributors.
 
@@ -89,7 +104,7 @@ Configuration: /Users/svenschrodt/projects/Html5_Lab/phpunit.xml
 ...............................................................  63 / 100 ( 63%)
 .....................................                           100 / 100 (100%)
 
-Time: 00:00.008, Memory: 22.39 MB
+Time: 00:00.007, Memory: 22.39 MB
 
 OK (100 tests, 100 assertions)
 </code>
