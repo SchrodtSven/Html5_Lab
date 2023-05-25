@@ -25,7 +25,7 @@ foreach($tmp as $item) {
 
     $t = (new StringType($item))->splitBy("\t");
     if(str_starts_with($t[1], 'Global')) {
-        $global->push((new StringType($t[0]))->trim());
+        $global->push((new StringType($t[0]))->trim())->quote("'");
     } else {
         //$attr2Element[$t[0]] = 
         $foo = (new StringType($t[1]))->replace('<')->replace('>')->trim();//->splitBy(',');
@@ -33,8 +33,8 @@ foreach($tmp as $item) {
         $bar->walk(function(&$item) {
             $item = (new StringType($item))->quote("'");
         });
-        echo (new StringType($t[0]))->quote("'")->append(' => ');
-        echo $bar->join(', ')->enclose('[', '],');echo PHP_EOL;
+        //echo (new StringType($t[0]))->quote("'")->append(' => ');
+        //echo $bar->join(', ')->enclose('[', '],');echo PHP_EOL;
     }
       //  print_r($bar);
         
@@ -42,6 +42,6 @@ foreach($tmp as $item) {
     
 
   //  die();
-
+echo $global->join(', ')->enclose('[', ']');
 //var_dump($global);
 //var_dump($attr2Element);

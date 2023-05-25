@@ -61,6 +61,11 @@ class HtmlSyntax
                                 'month', 'number', 'password', 'radio', 'range', 'reset', 'search', 'submit', 'tel', 'text', 
                                 'time', 'url', 'week'];
 
+    /** 
+     * Mapping attributes to elements
+     * 
+     * @var array
+     */
     public const ATTRIBUTE_TO_ELEMENT = [
                                             'accept ' => ['form', 'input'],
                                             'accept-charset ' => ['form'],
