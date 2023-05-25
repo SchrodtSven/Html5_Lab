@@ -21,9 +21,8 @@ trait CallbackArrayTrait
    
     public function walk(callable $callback): self
     {
-        $tmp = $this->current;
-        array_walk($tmp, $callback);
-        return new self($tmp);
+        array_walk($this->current, $callback);
+        return $this;
     }
 
     public function filter(callable $callback): self

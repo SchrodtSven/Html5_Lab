@@ -10,18 +10,26 @@ declare(strict_types=1);
  */
 
 
+ // 
+
 require_once 'private/lib/Html5_Lab/Autoload.php';
 use SchrodtSven\Html5_Lab\App\Config;
 use SchrodtSven\Html5_Lab\Kernel\StringType;
 use SchrodtSven\Html5_Lab\Kernel\ListType;
 use SchrodtSven\Html5_Lab\Kernel\Frontend\HtmlElement;
+use SebastianBergmann\CodeCoverage\Report\PHP;
+$list =ListType::createFromFile('archive/input_types.txt');
 
-$tmp = ListType::createFromFile('archive/all_attributes.txt');
-foreach($tmp as $item) {
+$list->walk(function (&$item) {
+        $item = new StringType($item);
+        $item->trim()
+        ->replace('<input type =')
+        ->replace('>')
+        ->replace('"')
+        ->quote("'");
 
-    $t = (new StringType($item))->splitBy("\t");
-    echo $t[1];
-    echo PHP_EOL;
-
-  //  die();
-}
+        
+        
+});
+   
+echo $list->join(', ')->prepend('[')->append('];');

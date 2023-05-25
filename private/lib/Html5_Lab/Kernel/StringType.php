@@ -26,21 +26,21 @@ class StringType implements \Stringable
 
     public function replace(string $find, string $replace = ''): self
     {
-        $this->save();
+       // $this->save();
         $this->current = str_replace($find, $replace, $this->current);
         return $this;
     }
 
-    private function save(): self
+    private function save(): void
     {
         $this->backup = $this->current;
-        return $this;
+        
     }
 
-    public function rollback(): self
+    public function rollback(): void
     {
-        $this->current = $this->rollback();
-        return $this;
+        $this->current = $this->backup;
+        
     }
 
 
@@ -49,6 +49,11 @@ class StringType implements \Stringable
         $this->save();
         $this->current = trim($this->current);
         return $this;
+    }
+
+    public function splitBy(string $separator): ListType
+    {
+        return new ListType(explode($separator, $this->current));
     }
 
     public function quote(string $mark = '"'): self
