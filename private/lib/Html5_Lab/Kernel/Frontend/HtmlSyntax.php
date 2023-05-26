@@ -118,8 +118,6 @@ class HtmlSyntax
                                             'ismap ' => ['img'],
                                             'kind ' => ['track'],
                                             'label ' => ['optgroup', 'option', 'track'],
-                                            'language Deprecated ' => ['script'],
-                                            'loading Experimental ' => ['img', 'iframe'],
                                             'list ' => ['input'],
                                             'loop ' => ['audio', 'marquee', 'video'],
                                             'low ' => ['meter'],
@@ -170,5 +168,9 @@ class HtmlSyntax
 
     ];
 
-
+    public const GLOBAL_ATTRIBUTES = [
+                                        'accesskey', 'autocapitalize', 'class', 'contenteditable', 'contextmenu', 'data-*', 'dir', 
+                                        'draggable', 'hidden', 'id', 'itemprop', 'lang', 'role', 'slot', 'spellcheck', 'style', 
+                                        'tabindex', 'title', 'translate'
+    ];
 }
