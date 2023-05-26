@@ -352,3 +352,79 @@ Time: 00:00.007, Memory: 22.39 MB
 OK (101 tests, 101 assertions)
 </code>
 </pre>
+.
+├── LICENSE
+├── README.md
+├── README_RAW.md
+├── gitit.sh
+├── phphttpd.sh
+├── phpunit.xml
+├── private
+│   ├── check
+│   ├── lib
+│   │   └── Html5_Lab
+│   │       ├── App
+│   │       │   └── Config.php
+│   │       ├── Autoload.php
+│   │       └── Kernel
+│   │           ├── Dry
+│   │           │   ├── ArrayAccessTrait.php
+│   │           │   ├── CallbackArrayTrait.php
+│   │           │   ├── IteratorTrait.php
+│   │           │   ├── MultiByteStringTrait.php
+│   │           │   └── StackOperationTrait.php
+│   │           ├── Frontend
+│   │           │   ├── HtmlAttributes.php
+│   │           │   ├── HtmlCollection.php
+│   │           │   ├── HtmlElement.php
+│   │           │   └── HtmlSyntax.php
+│   │           ├── ListType.php
+│   │           └── StringType.php
+│   └── test
+│       ├── App
+│       ├── Kernel
+│       │   └── StringTypeTest.php
+│       └── Test.php
+├── public
+│   ├── bootstrap.php
+│   ├── examples
+│   ├── foo.php
+│   ├── index.html
+│   ├── script
+│   └── style
+│       └── main.css
+└── router.php
+
+16 directories, 26 files
+      40 text files.
+classified 35 files      35 unique files.                              
+       7 files ignored.
+
+github.com/AlDanial/cloc v 1.96  T=0.02 s (1776.6 files/s, 190396.4 lines/s)
+-------------------------------------------------------------------------------
+Language                     files          blank        comment           code
+-------------------------------------------------------------------------------
+PHP                             24            326            511           1029
+JSON                             1              0              0           1000
+Markdown                         2             52              0            432
+Text                             3             13              0            281
+HTML                             1              2              0             40
+CSS                              1              9              0             20
+XML                              1              0              0             16
+Bourne Shell                     2              1              5             14
+-------------------------------------------------------------------------------
+SUM:                            35            403            516           2832
+-------------------------------------------------------------------------------
+PHPUnit 9.5.27 by Sebastian Bergmann and contributors.
+
+Runtime:       PHP 8.2.5
+Configuration: /Users/svenschrodt/projects/Html5_Lab/phpunit.xml
+
+...............................................................  63 / 101 ( 62%)
+......................................                          101 / 101 (100%)
+
+Time: 00:00.008, Memory: 22.39 MB
+
+OK (101 tests, 101 assertions)
+</code>
+</pre>

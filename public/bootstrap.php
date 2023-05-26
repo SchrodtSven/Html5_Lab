@@ -1,6 +1,8 @@
 <?php
 
 declare(strict_types=1);
+ 
+
 /**
  * @author Sven Schrodt<sven@schrodt.club>
  * @link https://github.com/SchrodtSven/Html5_Lab
@@ -11,3 +13,9 @@ declare(strict_types=1);
 
 
 require_once 'private/lib/Html5_Lab/Autoload.php';
+use SchrodtSven\Html5_Lab\Kernel\ListType;
+
+
+$foo = ListType::createFromJsonFile('archive/mock.json');
+
+var_dump($foo->cutCol('first_name'));

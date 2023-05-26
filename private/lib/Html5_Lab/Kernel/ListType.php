@@ -39,6 +39,12 @@ class ListType implements \Iterator, \Countable, \ArrayAccess
       return new self(file($fileName));
    }
 
+
+   public static function createFromJsonFile(string $fileName): self
+   {
+      return new self(json_decode(file_get_contents($fileName, true), true));
+   }
+
    public function count(): int
    {
       return count($this->current);
@@ -48,4 +54,10 @@ class ListType implements \Iterator, \Countable, \ArrayAccess
    {
       return new StringType(implode($glue, $this->current));
    }
+
+
+   public function cutCol(string $colName): self
+   {
+      return new self(array_column($this->current(), $colName));
+   } 
 }
