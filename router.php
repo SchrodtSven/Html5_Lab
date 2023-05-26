@@ -1,6 +1,4 @@
-<?php
-
-declare(strict_types=1);
+<?php declare(strict_types=1);
 /**
  *  This router is to be used with PHP Development Server for local development/testing purposes
  * 

@@ -58,7 +58,9 @@ Testing features of HTML 5, CSS 3 &amp; contemporary ECMAScript APIs
 │   ├── lib
 │   │   └── Html5_Lab
 │   │       ├── App
-│   │       │   └── Config.php
+│   │       │   ├── Config.php
+│   │       │   └── Tpl
+│   │       │       └── Document.generic.phtml
 │   │       ├── Autoload.php
 │   │       └── Kernel
 │   │           ├── Dry
@@ -71,7 +73,8 @@ Testing features of HTML 5, CSS 3 &amp; contemporary ECMAScript APIs
 │   │           │   ├── HtmlAttributes.php
 │   │           │   ├── HtmlCollection.php
 │   │           │   ├── HtmlElement.php
-│   │           │   └── HtmlSyntax.php
+│   │           │   ├── HtmlSyntax.php
+│   │           │   └── PhtmlParser.php
 │   │           ├── ListType.php
 │   │           └── StringType.php
 │   └── test
@@ -89,25 +92,25 @@ Testing features of HTML 5, CSS 3 &amp; contemporary ECMAScript APIs
 │       └── main.css
 └── router.php
 
-16 directories, 26 files
-      40 text files.
-classified 35 files      35 unique files.                              
+17 directories, 28 files
+      42 text files.
+classified 37 files      37 unique files.                              
        7 files ignored.
 
-github.com/AlDanial/cloc v 1.96  T=0.02 s (1642.0 files/s, 161624.3 lines/s)
+github.com/AlDanial/cloc v 1.96  T=0.02 s (1931.1 files/s, 182985.1 lines/s)
 -------------------------------------------------------------------------------
 Language                     files          blank        comment           code
 -------------------------------------------------------------------------------
-PHP                             24            326            511           1029
+PHP                             26            321            520           1083
 JSON                             1              0              0           1000
 Text                             3             13              0            281
-Markdown                         2             28              0            150
+Markdown                         2             28              0            153
 HTML                             1              2              0             40
-CSS                              1              9              0             20
+CSS                              1              8              0             21
 XML                              1              0              0             16
 Bourne Shell                     2              1              5             14
 -------------------------------------------------------------------------------
-SUM:                            35            379            516           2550
+SUM:                            37            373            525           2608
 -------------------------------------------------------------------------------
 PHPUnit 9.5.27 by Sebastian Bergmann and contributors.
 

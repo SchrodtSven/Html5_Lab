@@ -1,4 +1,4 @@
-<?php
+<?php  declare(strict_types=1);
 /**
  * Trait for classes implementing interface \ArrayAccess
  * 
@@ -10,8 +10,6 @@
  * @version 0.1
  * @since 2023-05-24
  */
-
-
 
 namespace SchrodtSven\Html5_Lab\Kernel\Dry;
 

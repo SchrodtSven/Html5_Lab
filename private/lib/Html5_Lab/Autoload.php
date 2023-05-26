@@ -1,6 +1,4 @@
-<?php
-
-declare(strict_types=1);
+<?php declare(strict_types=1);
 /*
  * Autoloading for PHP parts of Html5_Lab
  * 

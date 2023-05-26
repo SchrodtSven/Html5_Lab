@@ -1,6 +1,4 @@
-<?php
-
-declare(strict_types=1);
+<?php declare(strict_types=1);
 /**
  *  Class handling list(s) as objects, offering fluent OOP interface
  * 
@@ -56,8 +54,8 @@ class ListType implements \Iterator, \Countable, \ArrayAccess
    }
 
 
-   public function cutCol(string $colName): array
+   public function cutCol(string $colName): self
    {
-      return array_column($this->current(), $colName);
+      return new self(array_column($this->current, $colName));
    } 
 }
