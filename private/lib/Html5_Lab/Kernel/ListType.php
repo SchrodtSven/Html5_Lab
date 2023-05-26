@@ -56,8 +56,8 @@ class ListType implements \Iterator, \Countable, \ArrayAccess
    }
 
 
-   public function cutCol(string $colName): self
+   public function cutCol(string $colName): array
    {
-      return new self(array_column($this->current(), $colName));
+      return array_column($this->current(), $colName);
    } 
 }
