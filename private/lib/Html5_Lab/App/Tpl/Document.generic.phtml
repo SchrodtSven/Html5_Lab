@@ -12,6 +12,8 @@
 <body>
   <head><h1>HTML5_Lab - <?=$this->subtitle?></h1></head>
     <?=$this->mainContent?>
+    <section><output><?php var_dump(date('Y-m-d H:i:s')) ?>
+  </section>
   <footer>rendered in <?=$this->rendertime?> seconds <time datetime="<?=$this->now?>"><?=$this->now?></footer>
 </body>
 </html>

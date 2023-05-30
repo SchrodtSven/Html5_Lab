@@ -19,9 +19,10 @@ class Index extends Controller
             $this->parser->set('lang', 'de');
             $this->parser->set('keywords', 'Abc, deF, Foo, Baz');
             $this->parser->set('description', 'A long time ago in a galaxy far, far away...');
-            $this->parser->set('mainContent', $this->parser->renderDoclet('Forms/First'));
+            $this->parser->set('mainContent', $this->parser->renderView($this->view));
             $this->parser->set('rendertime', '0.001');
             $this->parser->set('now', date('Y-m-dTH:i:s'));
+            $this->parser->set('param', $this->getParam());
            echo  $this->parser->render();
     }
 

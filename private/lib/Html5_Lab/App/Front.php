@@ -1,4 +1,6 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 /**
  *  Very small-scale front controller
  * 
@@ -28,27 +30,30 @@ class Front
     private StringType $actn;
     private ListType $param;
 
+    private string $defaultView;
+
     public function __construct()
     {
-       $tmp = (new StringType($_SERVER['REQUEST_URI']))->splitBy('/')->trim();
-       if($tmp->count() > 1) {
+        $tmp = (new StringType($_SERVER['REQUEST_URI']))->splitBy('/')->trim();
+        if ($tmp->count() > 1) {
+
             $this->ctrl = (new StringType($tmp->shift()))->lower()->upperFirst();
             $this->actn = (new StringType($tmp->shift()))->lower();
-       
-       } else {
+        } else {
             $this->ctrl = new StringType(self::INDEX_CONTROLLER);
             $this->actn = new StringType(self::DEFAULT_ACTION);
-       }
+        }
 
-       $this->parseParam($tmp);
-       $this->run();
+        $this->defaultView = $this->ctrl . '/' . $this->actn;
 
+        $this->parseParam($tmp);
+        $this->run();
     }
 
     private function parseParam(ListType $tmp): void
     {
         $this->param = new ListType();
-        while(count($tmp)) {
+        while (count($tmp)) {
             $this->param[$tmp->shift()] = $tmp->shift() ?? null;
         }
     }
@@ -56,12 +61,11 @@ class Front
     private function run()
     {
         $appControllername = (string) $this->getCtrl()
-                                                ->prepend(self::APP_CONTROLLER_NAMESPACE);
-                                                //->append(self::CONTROLLER_SUFFIX);
+            ->prepend(self::APP_CONTROLLER_NAMESPACE);
         $action = (string) $this->getActn();
-        
-        (new $appControllername($this->getParam()))->$action();
-
+        $controller = new $appControllername($this->getParam());
+        $controller->setView($this->defaultView);
+        $controller->$action();
     }
 
     /**
@@ -135,4 +139,4 @@ class Front
 
         return $this;
     }
- }
+}
