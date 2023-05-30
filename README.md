@@ -60,7 +60,10 @@ Testing features of HTML 5, CSS 3 &amp; contemporary ECMAScript APIs
 │   │       ├── App
 │   │       │   ├── Config.php
 │   │       │   └── Tpl
-│   │       │       └── Document.generic.phtml
+│   │       │       ├── Document.generic.phtml
+│   │       │       └── Forms
+│   │       │           ├── Datalist.first.phtml
+│   │       │           └── First.phtml
 │   │       ├── Autoload.php
 │   │       └── Kernel
 │   │           ├── Dry
@@ -92,25 +95,25 @@ Testing features of HTML 5, CSS 3 &amp; contemporary ECMAScript APIs
 │       └── main.css
 └── router.php
 
-17 directories, 28 files
-      42 text files.
-classified 37 files      37 unique files.                              
+18 directories, 30 files
+      45 text files.
+classified 40 files      40 unique files.                              
        7 files ignored.
 
-github.com/AlDanial/cloc v 1.96  T=0.02 s (1931.1 files/s, 182985.1 lines/s)
+github.com/AlDanial/cloc v 1.96  T=0.02 s (1678.4 files/s, 192807.3 lines/s)
 -------------------------------------------------------------------------------
 Language                     files          blank        comment           code
 -------------------------------------------------------------------------------
-PHP                             26            321            520           1083
+PHP                             29            331            532           2143
 JSON                             1              0              0           1000
 Text                             3             13              0            281
-Markdown                         2             28              0            153
+Markdown                         2             28              0            156
 HTML                             1              2              0             40
-CSS                              1              8              0             21
+CSS                              1              9              0             24
 XML                              1              0              0             16
 Bourne Shell                     2              1              5             14
 -------------------------------------------------------------------------------
-SUM:                            37            373            525           2608
+SUM:                            40            384            537           3674
 -------------------------------------------------------------------------------
 PHPUnit 9.5.27 by Sebastian Bergmann and contributors.
 
@@ -120,7 +123,7 @@ Configuration: /Users/svenschrodt/projects/Html5_Lab/phpunit.xml
 ...............................................................  63 / 101 ( 62%)
 ......................................                          101 / 101 (100%)
 
-Time: 00:00.008, Memory: 22.39 MB
+Time: 00:00.007, Memory: 22.39 MB
 
 OK (101 tests, 101 assertions)
 </code>

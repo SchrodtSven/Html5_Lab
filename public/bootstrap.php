@@ -18,6 +18,7 @@ $parser->set('subtitle', 'It´s a meee ...');
 $parser->set('lang', 'de');
 $parser->set('keywords', 'Abc, deF, Foo, Baz');
 $parser->set('description', 'A long time ago in a galaxy far, far away...');
-$parser->set('mainContent', '<h2>Help me Darwin -  Darth Wintendo on a Mac <code>;-X</code>!    </h2>');
+$parser->set('mainContent', $parser->renderDoclet('Forms/First'));
 $parser->set('rendertime', '0.001');
+$parser->set('now', date('Y-m-dTH:i:s'));
 echo $parser->render();

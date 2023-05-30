@@ -58,4 +58,10 @@ class ListType implements \Iterator, \Countable, \ArrayAccess
    {
       return new self(array_column($this->current, $colName));
    } 
+
+   public function naturalSort(): self
+   {
+      natsort($this->current);
+      return $this;
+   }
 }

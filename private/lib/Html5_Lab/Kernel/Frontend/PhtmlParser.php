@@ -56,7 +56,34 @@ class PhtmlParser
         $out = ob_get_contents();
         ob_end_clean();
         return $out;
-        
     }
 
+
+    public function renderDoclet(string $fileName): string
+    {
+        $tmp = (new self())->setTpl($fileName);
+        return $tmp->render();
+    }
+    /**
+     * Get the value of tpl
+     *
+     * @return string
+     */
+    public function getTpl(): string
+    {
+        return $this->tpl;
+    }
+
+    /**
+     * Set the value of tpl
+     *
+     * @param string $tpl
+     *
+     * @return self
+     */
+    public function setTpl(string $tpl): self
+    {
+        $this->tpl = $tpl;
+        return $this;
+    }
 }
