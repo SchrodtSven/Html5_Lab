@@ -17,6 +17,7 @@
 
 namespace SchrodtSven\Html5_Lab\Kernel\Dry;
 
+use SchrodtSven\Html5_Lab\Kernel\ListType;
 use SchrodtSven\Html5_Lab\Kernel\P7Array;
 use SchrodtSven\Html5_Lab\Kernel\P7String;
 
@@ -284,9 +285,9 @@ trait MultiByteStringTrait
         }
         
 
-        public function encodingAliases(string $encoding): P7Array
+        public function encodingAliases(string $encoding): ListType
         {
-            return new P7Array(mb_encoding_aliases($encoding));
+            return new ListType(mb_encoding_aliases($encoding));
             
         }
         

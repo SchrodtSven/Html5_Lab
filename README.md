@@ -12,14 +12,25 @@
         </ul>
     </li>
   </ul>
-  <p>-- <br>
-  <strong><code><num>419.23</num> I am a <i>coffee<i>mug!</code></strong>
-  </p>
+<p>
+    <code>GET / HTTP/1.1</code><br><br>
+    <code>419.23  I am a <i>coffee<i>mug!</code>
+ </p>
   
 ## Motivation
 Testing features of HTML 5, CSS 3 &amp; contemporary ECMAScript APIs
-- to be assisted by some PHP code
+- to be assisted by some PHP code for basic MVC-like functionality and dynamic creation of static 
+file resources (HTML, ECMAScript, CSS etc... ) from (open|free available) data 
 
+## Design & architecture
+
+## Conventions
+
+### Base MVC
+
+#### Http Routing
+
+ - /$CTRL/$ACTN/...$PARAM | static file resource in doc root ('<code>public</code>')
 
 ## Appendix
 
@@ -59,13 +70,19 @@ Testing features of HTML 5, CSS 3 &amp; contemporary ECMAScript APIs
 │   │   └── Html5_Lab
 │   │       ├── App
 │   │       │   ├── Config.php
+│   │       │   ├── Ctrl
+│   │       │   │   ├── Foo.php
+│   │       │   │   └── Index.php
+│   │       │   ├── Front.php
 │   │       │   └── Tpl
 │   │       │       ├── Document.generic.phtml
 │   │       │       └── Forms
 │   │       │           ├── Datalist.first.phtml
-│   │       │           └── First.phtml
+│   │       │           ├── First.phtml
+│   │       │           └── Slider.phtml
 │   │       ├── Autoload.php
 │   │       └── Kernel
+│   │           ├── Controller.php
 │   │           ├── Dry
 │   │           │   ├── ArrayAccessTrait.php
 │   │           │   ├── CallbackArrayTrait.php
@@ -95,25 +112,25 @@ Testing features of HTML 5, CSS 3 &amp; contemporary ECMAScript APIs
 │       └── main.css
 └── router.php
 
-18 directories, 30 files
-      45 text files.
-classified 40 files      40 unique files.                              
+19 directories, 35 files
+      50 text files.
+classified 45 files      45 unique files.                              
        7 files ignored.
 
-github.com/AlDanial/cloc v 1.96  T=0.02 s (1678.4 files/s, 192807.3 lines/s)
+github.com/AlDanial/cloc v 1.96  T=0.02 s (1942.8 files/s, 210602.4 lines/s)
 -------------------------------------------------------------------------------
 Language                     files          blank        comment           code
 -------------------------------------------------------------------------------
-PHP                             29            331            532           2143
+PHP                             34            380            618           2274
 JSON                             1              0              0           1000
 Text                             3             13              0            281
-Markdown                         2             28              0            156
+Markdown                         2             32              0            169
 HTML                             1              2              0             40
 CSS                              1              9              0             24
 XML                              1              0              0             16
 Bourne Shell                     2              1              5             14
 -------------------------------------------------------------------------------
-SUM:                            40            384            537           3674
+SUM:                            45            437            623           3818
 -------------------------------------------------------------------------------
 PHPUnit 9.5.27 by Sebastian Bergmann and contributors.
 

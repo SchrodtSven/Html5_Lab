@@ -59,6 +59,7 @@ class Autoload
                 
                 $filePathClass = str_replace(self::MIMI, '', $className);
                 //replace separator for namespaces with directory separator
+                
                 $file = self::LIB_PREFIX . str_replace(
                         self::NAMESPACE_SEPARATOR, 
                         \DIRECTORY_SEPARATOR, 

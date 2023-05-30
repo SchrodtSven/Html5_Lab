@@ -10,9 +10,12 @@
  */
 
 namespace SchrodtSven\Html5_Lab\Kernel;
+use SchrodtSven\Html5_Lab\Kernel\Dry\MultiByteStringTrait;
 
 class StringType implements \Stringable
 {
+    use MultiByteStringTrait;
+    
     public function __construct(private string $current = '', private string $backup = '')
     {
     }
@@ -69,6 +72,7 @@ class StringType implements \Stringable
 
     public function prepend(string|StringType $begin): self
     {
+        $this->save();
         $this->current = sprintf(
             '%s%s',
             $begin,
@@ -79,11 +83,27 @@ class StringType implements \Stringable
 
     public function append(string|StringType $end): self
     {
+        $this->save();
         $this->current = sprintf(
             '%s%s',
             $this->current,
             $end
         );
+        return $this;
+    }
+
+    public function upperFirst(): self
+    {
+        $this->save();
+        $this->current = ucfirst($this->current);
+        return $this;
+    }
+
+
+    public function lowerFirst(): self
+    {
+        $this->save();
+        $this->current = lcfirst($this->current);
         return $this;
     }
 }

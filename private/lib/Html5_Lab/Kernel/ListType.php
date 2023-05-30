@@ -23,7 +23,7 @@ class ListType implements \Iterator, \Countable, \ArrayAccess
    use StackOperationTrait;
    use CallbackArrayTrait;
 
-   public function __construct(private array $current = [], private array $backup = [])
+   public function __construct(private array $current = [])
    {
    }
 
@@ -62,6 +62,19 @@ class ListType implements \Iterator, \Countable, \ArrayAccess
    public function naturalSort(): self
    {
       natsort($this->current);
+      return $this;
+   }
+
+   /**
+    * Deleting empty elements on array boundaries
+    */
+   public function trim(): self
+   {
+      if(empty($this->current[0]))
+         $this->shift();
+
+      if(empty($this->current[$this->count()-1]))
+         $this->pop();
       return $this;
    }
 }
