@@ -9,7 +9,7 @@ foo.html
 foo.js
 foo.css
 foo.sh
-
+*.ttf
 
 # Darwin stuff
 .DS_Store

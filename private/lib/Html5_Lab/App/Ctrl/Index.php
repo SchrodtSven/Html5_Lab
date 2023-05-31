@@ -22,7 +22,7 @@ class Index extends Controller
             $this->parser->set('mainContent', $this->parser->renderView($this->view));
             $this->parser->set('rendertime', '0.001');
             $this->parser->set('now', date('Y-m-dTH:i:s'));
-            $this->parser->set('param', $this->getParam());
+            $this->parser->set('param', $this->getParam()->raw());
            echo  $this->parser->render();
     }
 
@@ -31,5 +31,14 @@ class Index extends Controller
     {
         echo '<code>' . self::class . ' :: __call() </code> being ' .$name;
         var_dump($this->getParam()->raw());
+    }
+
+
+
+    public function formdemo()
+    {
+        $this->preparse('HTML 4 new Form elements');
+        $this->parser->set('mainContent', $this->parser->renderDoclet('Forms/Html_Five'));
+        echo $this->parser->render();
     }
 }

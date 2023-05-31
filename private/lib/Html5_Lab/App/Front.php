@@ -63,9 +63,15 @@ class Front
         $appControllername = (string) $this->getCtrl()
             ->prepend(self::APP_CONTROLLER_NAMESPACE);
         $action = (string) $this->getActn();
-        $controller = new $appControllername($this->getParam());
-        $controller->setView($this->defaultView);
-        $controller->$action();
+        try {
+                $controller = new $appControllername($this->getParam());
+                $controller->setView($this->defaultView);
+                $controller->$action();
+        } catch (\Error $e) {
+                http_response_code(404);
+                die('File not found ... - Controller ' . $e->getMessage());
+        }
+        
     }
 
     /**

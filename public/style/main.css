@@ -1,7 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@200&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 body {
-  font-family: 'Crimson Pro', serif;
+  font-family: 'Roboto', serif;
   font-size: 130%;
 }
 
@@ -30,4 +29,36 @@ h1 {
 label {
         font-family: 'Fira Sans', sans-serif;
 }
+
+meter, input[type=range]  {
+        width:400px;
+        border:1px solid green;
+        padding:5px;
+        margin: 4px;
+}
+menu,
+ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  width: 400px;
+}
+
+li {
+  flex-grow: 1;
+}
+
+summary {
+        font-weight: bold;
+        margin: -0.5em -0.5em 0;
+        padding: 0.5em;
+    }
     
+    details[open] {
+        padding: 0.5em;
+    }
+    
+    details[open] summary {
+        border-bottom: 1px solid #aaa;
+        margin-bottom: 0.5em;
+    }

@@ -65,4 +65,17 @@ abstract class Controller
 
         return $this;
     }
+
+    public function preparse(string $subtitle): void
+    {
+            $this->parser->set('subtitle', 'It´s a meee ...');
+            $this->parser->set('lang', 'de');
+            $this->parser->set('keywords', 'Abc, deF, Foo, Baz');
+            $this->parser->set('description', 'A long time ago in a galaxy far, far away...');
+            
+            $this->parser->set('rendertime', '0.001');
+            $this->parser->set('now', date('Y-m-dTH:i:s'));
+            $this->parser->set('param', $this->getParam()->raw());
+        
+    }
 }
