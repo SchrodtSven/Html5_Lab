@@ -7,7 +7,7 @@ fi
 tree -I "archive|dump|cache|phpunit"  >> README.md
 # Counting lines of code (filtered by .cloc contents) and add to README.md
 cloc . >> README.md; 
-# Processing uit tests and add results to README.md
+# Processing unit tests and add results to README.md
 phpunit >> README.md
 # Sanitizing markup in README.md
 echo "</code>" >> README.md
@@ -16,3 +16,4 @@ echo "</pre>" >> README.md
 git add .
 git commit -m "$1"
 git push origin
+echo "... done!"
