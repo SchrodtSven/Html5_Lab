@@ -136,24 +136,24 @@ file resources (HTML, ECMAScript, CSS etc... ) from (open | free available | sel
 └── router.php
 
 23 directories, 53 files
-      56 text files.
-classified 51 files      51 unique files.                              
+      57 text files.
+classified 52 files      52 unique files.                              
       21 files ignored.
 
-github.com/AlDanial/cloc v 1.96  T=0.03 s (1801.4 files/s, 188548.5 lines/s)
+github.com/AlDanial/cloc v 1.96  T=0.03 s (1620.7 files/s, 169331.8 lines/s)
 -------------------------------------------------------------------------------
 Language                     files          blank        comment           code
 -------------------------------------------------------------------------------
-PHP                             39            416            651           2409
+PHP                             39            420            677           2426
 JSON                             1              0              0           1000
-Text                             4             46              0            450
+Text                             5             47              0            451
 Markdown                         2             33              0            191
-CSS                              1             12              0             52
+CSS                              1             24              0             85
 HTML                             1              2              0             40
 XML                              1              0              0             16
-Bourne Shell                     2              1              5             14
+Bourne Shell                     2              1              5             15
 -------------------------------------------------------------------------------
-SUM:                            51            510            656           4172
+SUM:                            52            527            682           4224
 -------------------------------------------------------------------------------
 PHPUnit 9.5.27 by Sebastian Bergmann and contributors.
 
@@ -164,116 +164,6 @@ Configuration: /Users/svenschrodt/projects/Html5_Lab/phpunit.xml
 ......................................                          101 / 101 (100%)
 
 Time: 00:00.007, Memory: 22.39 MB
-
-OK (101 tests, 101 assertions)
-</code>
-</pre>
-.
-├── LICENSE
-├── README.md
-├── README_RAW.md
-├── gitit.sh
-├── phphttpd.sh
-├── phpunit.xml
-├── private
-│   ├── check
-│   ├── lib
-│   │   └── Html5_Lab
-│   │       ├── App
-│   │       │   ├── Config.php
-│   │       │   ├── Ctrl
-│   │       │   │   ├── Foo.php
-│   │       │   │   └── Index.php
-│   │       │   ├── Front.php
-│   │       │   ├── Tpl
-│   │       │   │   ├── Document.generic.phtml
-│   │       │   │   ├── Forms
-│   │       │   │   │   ├── Datalist.first.phtml
-│   │       │   │   │   ├── First.phtml
-│   │       │   │   │   ├── Html_Five.phtml
-│   │       │   │   │   └── Slider.phtml
-│   │       │   │   └── Widgets
-│   │       │   │       └── Blockquote.phtml
-│   │       │   └── Views
-│   │       │       ├── Foo
-│   │       │       └── Index
-│   │       │           ├── TextMarkup.phtml
-│   │       │           └── default.phtml
-│   │       ├── Autoload.php
-│   │       └── Kernel
-│   │           ├── Controller.php
-│   │           ├── Dry
-│   │           │   ├── ArrayAccessTrait.php
-│   │           │   ├── CallbackArrayTrait.php
-│   │           │   ├── IteratorTrait.php
-│   │           │   ├── MultiByteStringTrait.php
-│   │           │   └── StackOperationTrait.php
-│   │           ├── Frontend
-│   │           │   ├── HtmlAttributes.php
-│   │           │   ├── HtmlCollection.php
-│   │           │   ├── HtmlCollectionTpl.php
-│   │           │   ├── HtmlElement.php
-│   │           │   ├── HtmlSyntax.php
-│   │           │   └── PhtmlParser.php
-│   │           ├── ListType.php
-│   │           └── StringType.php
-│   └── test
-│       ├── App
-│       ├── Kernel
-│       │   └── StringTypeTest.php
-│       └── Test.php
-├── public
-│   ├── bootstrap.php
-│   ├── examples
-│   ├── foo.php
-│   ├── index.html
-│   ├── script
-│   └── style
-│       ├── LICENSE.txt
-│       ├── Roboto-Black.ttf
-│       ├── Roboto-BlackItalic.ttf
-│       ├── Roboto-Bold.ttf
-│       ├── Roboto-BoldItalic.ttf
-│       ├── Roboto-Italic.ttf
-│       ├── Roboto-Light.ttf
-│       ├── Roboto-LightItalic.ttf
-│       ├── Roboto-Medium.ttf
-│       ├── Roboto-MediumItalic.ttf
-│       ├── Roboto-Regular.ttf
-│       ├── Roboto-Thin.ttf
-│       ├── Roboto-ThinItalic.ttf
-│       └── main.css
-└── router.php
-
-23 directories, 53 files
-      56 text files.
-classified 51 files      51 unique files.                              
-      21 files ignored.
-
-github.com/AlDanial/cloc v 1.96  T=0.03 s (1578.2 files/s, 171587.0 lines/s)
--------------------------------------------------------------------------------
-Language                     files          blank        comment           code
--------------------------------------------------------------------------------
-PHP                             39            419            651           2457
-JSON                             1              0              0           1000
-Text                             4             46              0            450
-Markdown                         2             39              0            295
-CSS                              1             24              0             85
-HTML                             1              2              0             40
-XML                              1              0              0             16
-Bourne Shell                     2              1              5             15
--------------------------------------------------------------------------------
-SUM:                            51            531            656           4358
--------------------------------------------------------------------------------
-PHPUnit 9.5.27 by Sebastian Bergmann and contributors.
-
-Runtime:       PHP 8.2.5
-Configuration: /Users/svenschrodt/projects/Html5_Lab/phpunit.xml
-
-...............................................................  63 / 101 ( 62%)
-......................................                          101 / 101 (100%)
-
-Time: 00:00.008, Memory: 22.39 MB
 
 OK (101 tests, 101 assertions)
 </code>

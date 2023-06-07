@@ -32,7 +32,21 @@ class Front
 
     private string $defaultView;
 
+    /**
+     * Constructor function
+     */
     public function __construct()
+    {
+        $this->parseRoute();
+        $this->run();
+    }
+
+    /**
+     * Parsing HTTP path to $CTRL->$ACTN($PARAMS)
+     *
+     * @return void
+     */
+    private function parseRoute(): void
     {
         $tmp = (new StringType($_SERVER['REQUEST_URI']))->splitBy('/')->trim();
         if ($tmp->count() > 1) {
@@ -44,12 +58,16 @@ class Front
             $this->actn = new StringType(self::DEFAULT_ACTION);
         }
 
-        $this->defaultView = $this->ctrl . '/' . $this->actn;
-
+        $this->defaultView = $this->ctrl . \DIRECTORY_SEPARATOR . $this->actn;
         $this->parseParam($tmp);
-        $this->run();
     }
 
+    /**
+     * Parsing HTTP path snipped off of $CTRL & $ACTN, if any
+     *
+     * @param ListType $tmp
+     * @return void
+     */
     private function parseParam(ListType $tmp): void
     {
         $this->param = new ListType();
@@ -58,7 +76,12 @@ class Front
         }
     }
 
-    private function run()
+    /**
+     * Running app controller 
+     *
+     * @return void
+     */
+    private function run() : void
     {
         $appControllername = (string) $this->getCtrl()
             ->prepend(self::APP_CONTROLLER_NAMESPACE);
@@ -67,7 +90,7 @@ class Front
                 $controller = new $appControllername($this->getParam());
                 $controller->setView($this->defaultView);
                 $controller->$action();
-        } catch (\Error $e) {
+        } catch (\Error $e) { // differentiate status code by reason (\Error type)
                 http_response_code(404);
                 die('File not found ... - Controller ' . $e->getMessage());
         }

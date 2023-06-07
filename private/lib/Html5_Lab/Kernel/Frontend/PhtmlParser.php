@@ -54,7 +54,7 @@ class PhtmlParser
     }
 
 
-    //@FIXME 3xrender*()
+     
     public function render(): string
     {
        return $this->renderInternal($this->tplDir . $this->tpl);
@@ -71,6 +71,14 @@ class PhtmlParser
         return $tmp->render();
     }
 
+    /**
+     * Internally used rendering function using PHP's output control mechanism
+     *
+     * 
+     * @see https://www.php.net/manual/en/ref.outcontrol.php
+     * @param string $fullPath
+     * @return string
+     */
     private function renderInternal(string $fullPath): string
     {
         ob_start();
