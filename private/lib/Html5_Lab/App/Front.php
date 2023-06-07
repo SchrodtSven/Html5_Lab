@@ -50,10 +50,13 @@ class Front
     {
         $tmp = (new StringType($_SERVER['REQUEST_URI']))->splitBy('/')->trim();
         if ($tmp->count() > 1) {
-
-            $this->ctrl = (new StringType($tmp->shift()))->lower()->upperFirst();
-            $this->actn = (new StringType($tmp->shift()))->lower();
+            // Shifting url parts; adjusting case for Controller and action
+            $this->ctrl = (new StringType($tmp->shift()))
+                            ->lower()->upperFirst();
+            $this->actn = (new StringType($tmp->shift()))
+                            ->lower();
         } else {
+            // Using defaults for controller & action
             $this->ctrl = new StringType(self::INDEX_CONTROLLER);
             $this->actn = new StringType(self::DEFAULT_ACTION);
         }

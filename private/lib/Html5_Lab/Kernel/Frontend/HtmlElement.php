@@ -1,4 +1,6 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 /**
  * Entity class for HTML elements 
  * 
@@ -10,6 +12,7 @@
  */
 
 namespace SchrodtSven\Html5_Lab\Kernel\Frontend;
+
 use SchrodtSven\Html5_Lab\Kernel\StringType;
 use SchrodtSven\Html5_Lab\Kernel\ListType;
 
@@ -30,13 +33,12 @@ class HtmlElement
      * @param HtmlAttributes|null $attributes
      */
     public function __construct(
-                                protected string $name, 
-                                protected mixed $content = '',
-                                protected ?HtmlAttributes $attributes = null
-    ) 
-    {
-        if(is_null($this->attributes))
-                    $this->attributes = new HtmlAttributes();
+        protected string $name,
+        protected mixed $content = '',
+        protected ?HtmlAttributes $attributes = null
+    ) {
+        if (is_null($this->attributes))
+            $this->attributes = new HtmlAttributes();
     }
 
     /**
@@ -47,23 +49,24 @@ class HtmlElement
      */
     public function render(): string
     {
-        return sprintf(HtmlSyntax::ELEMENT_TPL,
-                                                $this->name,
-                                                (string) $this->attributes,
-                                                $this->content,
-                                                $this->name
+        return sprintf(
+            HtmlSyntax::ELEMENT_TPL,
+            $this->name,
+            (string) $this->attributes,
+            $this->content,
+            $this->name
 
-                );
+        );
     }
 
-    
+
     /**
      * Getter for element name
      * 
      */
     public function getName(): string
-    { 
-        return $this->name; 
+    {
+        return $this->name;
     }
 
     /**
@@ -72,30 +75,32 @@ class HtmlElement
      * @param string $name
      * @return self
      */
-    public function setName(string $name): self 
-    { 
-        $this->name = $name; return $this; 
+    public function setName(string $name): self
+    {
+        $this->name = $name;
+        return $this;
     }
-    
+
     /**
      * Getter for Content
      *
      * @return ListType
      */
-    public function getContent(): ListType 
-    { 
-        return $this->content; 
+    public function getContent(): ListType
+    {
+        return $this->content;
     }
-    
+
     /**
      * Setter for content
      *
      * @param ListType $content
      * @return self
      */
-    public function setContent(ListType $content): self 
-    { 
-        $this->content = $content; return $this; 
+    public function setContent(ListType $content): self
+    {
+        $this->content = $content;
+        return $this;
     }
 
     /**
@@ -104,8 +109,8 @@ class HtmlElement
      * @return HtmlAttributes
      */
     public function getAttributes(): HtmlAttributes
-    { 
-        return $this->attributes; 
+    {
+        return $this->attributes;
     }
 
     /**
@@ -114,9 +119,10 @@ class HtmlElement
      * @param HtmlAttributes
      * @reeturn self
      */
-    public function setAttributes(HtmlAttributes $attributes): self 
-    { 
-        $this->attributes = $attributes; return $this; 
+    public function setAttributes(HtmlAttributes $attributes): self
+    {
+        $this->attributes = $attributes;
+        return $this;
     }
 
     /**
@@ -148,4 +154,3 @@ class HtmlElement
         return $this->render();
     }
 }
-
