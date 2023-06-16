@@ -37,8 +37,17 @@ class Index extends Controller
 
     public function formdemo()
     {
-        $this->preparse('HTML 4 new Form elements');
+        $this->preparse('HTML 5 new Form elements');
         $this->parser->set('mainContent', $this->parser->renderDoclet('Forms/Html_Five'));
+        echo $this->parser->render();
+    }
+
+    public function widgetdemo()
+    {
+        //$this->preparse('HTML 5 based custom widgets');
+       // $this->parser->set('mainContent', $this->parser->renderDoclet('Widgets/DummyCalculator'));
+       $this->parser->set('subtitle', 'HC 23 &lt;HTML5 Calculator v.023&gt;');
+       $this->parser->set('mainContent', $this->parser->renderView($this->view));
         echo $this->parser->render();
     }
 }

@@ -107,3 +107,28 @@ th,
 td {
         border: 1px solid;
 }
+
+form.calculator {
+        padding: 0.4em;
+        width: 33em;
+}
+
+form.calculator, .calcKey {
+        background-color: rgb(37, 24, 2);
+        color: white;
+}
+
+.calcKey {
+        font-family: 'Courier New', Courier, monospace;
+        margin: 0.42em;
+        min-width: 2em;
+        border-radius: 5px;
+}
+
+#calc output{
+        color: rgb(1, 28, 6);
+        background-color: rgb(209, 241, 186);
+        width: 23em;
+        display: inline-block;
+        border: 1px solid white;
+}

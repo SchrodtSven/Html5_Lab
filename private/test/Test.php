@@ -34,7 +34,7 @@ class Test extends TestCase
     /**
      * @return int[][]
      */
-    public function getSummandsAndCheck(): array
+    public static function getSummandsAndCheck(): array
     {
         return [
             [211, 969, 1180],

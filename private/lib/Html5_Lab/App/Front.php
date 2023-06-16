@@ -66,7 +66,7 @@ class Front
     }
 
     /**
-     * Parsing HTTP path snipped off of $CTRL & $ACTN, if any
+     * Parsing params snipped off of $CTRL & $ACTN, if any
      *
      * @param ListType $tmp
      * @return void

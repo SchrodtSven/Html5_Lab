@@ -27,7 +27,14 @@ class StringType implements \Stringable
 
     public function replace(string $find, string $replace = ''): self
     {
-       // $this->save();
+       $this->save();
+        $this->current = str_replace($find, $replace, $this->current);
+        return $this;
+    }
+
+    public function replaceMultiple(array $find, array $replace = ['']): self
+    {
+       $this->save();
         $this->current = str_replace($find, $replace, $this->current);
         return $this;
     }

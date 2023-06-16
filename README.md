@@ -45,6 +45,7 @@ file resources (HTML, ECMAScript, CSS etc... ) from (open | free available | sel
  - OS: Linux raspberrypi 5.10.17-v7l+ #1403 SMP Mon Feb 22 11:33:35 GMT 2021 armv7l GNU/Linux
  - IDE: Visual Studio Code; version: 1.70.2 (Universal)
  - PHP: 8.2.4 (NTS); with Zend OPcache v8.2.0; with Xdebug v3.2.1
+ - Unit testing: PHPUnit 10.2.1 
  - Java: openjdk version "11.0.18" 2023-01-17; OpenJDK Runtime Environment  & OpenJDK Server VM
  - RDBMS: Sqlite version 3.39.5
  - CI/CD pipeline: Jenkins 
@@ -64,6 +65,7 @@ file resources (HTML, ECMAScript, CSS etc... ) from (open | free available | sel
 ├── gitit.sh
 ├── phphttpd.sh
 ├── phpunit.xml
+├── phpunit.xml.bak
 ├── private
 │   ├── check
 │   ├── lib
@@ -82,12 +84,16 @@ file resources (HTML, ECMAScript, CSS etc... ) from (open | free available | sel
 │   │       │   │   │   ├── Html_Five.phtml
 │   │       │   │   │   └── Slider.phtml
 │   │       │   │   └── Widgets
-│   │       │   │       └── Blockquote.phtml
+│   │       │   │       ├── Blockquote.phtml
+│   │       │   │       ├── Calc.phtml
+│   │       │   │       └── DummyCalculator.phtml
 │   │       │   └── Views
 │   │       │       ├── Foo
 │   │       │       └── Index
 │   │       │           ├── TextMarkup.phtml
-│   │       │           └── default.phtml
+│   │       │           ├── default.phtml
+│   │       │           ├── dummycalc.phtml
+│   │       │           └── widgetdemo.phtml
 │   │       ├── Autoload.php
 │   │       └── Kernel
 │   │           ├── Controller.php
@@ -116,6 +122,7 @@ file resources (HTML, ECMAScript, CSS etc... ) from (open | free available | sel
 │   ├── examples
 │   ├── foo.php
 │   ├── index.html
+│   ├── parser.php
 │   ├── script
 │   └── style
 │       ├── LICENSE.txt
@@ -134,35 +141,35 @@ file resources (HTML, ECMAScript, CSS etc... ) from (open | free available | sel
 │       └── main.css
 └── router.php
 
-23 directories, 53 files
-      57 text files.
-classified 52 files      52 unique files.                              
-      21 files ignored.
+23 directories, 59 files
+      65 text files.
+classified 58 files      58 unique files.                              
+      23 files ignored.
 
-github.com/AlDanial/cloc v 1.96  T=0.02 s (2662.7 files/s, 278613.2 lines/s)
+github.com/AlDanial/cloc v 1.96  T=0.04 s (1326.9 files/s, 283138.9 lines/s)
 -------------------------------------------------------------------------------
 Language                     files          blank        comment           code
 -------------------------------------------------------------------------------
-PHP                             39            420            679           2432
+HTML                             2             85              0           6770
+PHP                             44            436            680           2504
 JSON                             1              0              0           1000
 Text                             5             47              0            451
-Markdown                         2             32              0            191
-CSS                              1             24              0             85
-HTML                             1              2              0             40
-XML                              1              0              0             16
+Markdown                         2             32              0            198
+CSS                              1             28              0            106
+XML                              1              0              0             17
 Bourne Shell                     2              1              6             15
 -------------------------------------------------------------------------------
-SUM:                            52            526            685           4230
+SUM:                            58            629            686          11061
 -------------------------------------------------------------------------------
-PHPUnit 9.5.27 by Sebastian Bergmann and contributors.
+PHPUnit 10.2.1 by Sebastian Bergmann and contributors.
 
-Runtime:       PHP 8.2.6
+Runtime:       PHP 8.2.7
 Configuration: /Users/svenschrodt/projects/Html5_Lab/phpunit.xml
 
 ...............................................................  63 / 101 ( 62%)
 ......................................                          101 / 101 (100%)
 
-Time: 00:00.007, Memory: 22.39 MB
+Time: 00:00.018, Memory: 22.42 MB
 
 OK (101 tests, 101 assertions)
 </code>
