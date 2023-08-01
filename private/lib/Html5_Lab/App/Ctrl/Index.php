@@ -16,6 +16,7 @@ class Index extends Controller
     public function default()
     {
             $this->parser->set('subtitle', 'It´s a meee ...');
+            $this->parser->subtitle .= 'Luigii!';
             $this->parser->set('lang', 'de');
             $this->parser->set('keywords', 'Abc, deF, Foo, Baz');
             $this->parser->set('description', 'A long time ago in a galaxy far, far away...');

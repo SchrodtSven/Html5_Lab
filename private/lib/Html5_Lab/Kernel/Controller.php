@@ -66,6 +66,13 @@ abstract class Controller
         return $this;
     }
 
+    /**
+     * Parsing current template / view with default contents
+     *
+     * @param string $subtitle
+     * @FIXME
+     * @return void
+     */
     public function preparse(string $subtitle): void
     {
             $this->parser->set('subtitle', $subtitle);

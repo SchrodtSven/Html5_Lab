@@ -1,6 +1,6 @@
 <?php declare(strict_types=1);
 /**
- *  Parser for templates in alternative PHP syntax (´PHTML´)
+ *  Minimalistic parser for templates in alternative PHP syntax (´PHTML´)
  * 
  * @author Sven Schrodt<sven@schrodt.club>
  * @link https://github.com/SchrodtSven/Html5_Lab
@@ -45,12 +45,12 @@ class PhtmlParser
 
     public function __get(string $name): mixed
     {
-        return $this->content[$name] ?? '';
+        return $this->get($name);
     }
 
     public function __set(string $name, mixed $value): void
     {
-        $this->content[$name] = $value;
+        $this->set($name, $value);
     }
 
 
@@ -130,7 +130,6 @@ class PhtmlParser
     public function setView(string $view): self
     {
         $this->view = $view;
-
         return $this;
     }
 }

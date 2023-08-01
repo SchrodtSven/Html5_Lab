@@ -37,7 +37,13 @@ class ListType implements \Iterator, \Countable, \ArrayAccess
       return new self(file($fileName));
    }
 
-
+   /**
+    * Creating current instance from content of a json encoded file
+    *
+    * @FIXME -> file ! exists
+    * @param string $fileName
+    * @return self
+    */
    public static function createFromJsonFile(string $fileName): self
    {
       return new self(json_decode(file_get_contents($fileName, true), true));

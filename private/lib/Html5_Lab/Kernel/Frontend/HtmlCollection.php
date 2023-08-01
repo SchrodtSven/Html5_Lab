@@ -17,9 +17,11 @@
 namespace SchrodtSven\P7WikiFoo\Kernel\Frontend;
 use SchrodtSven\P7WikiFoo\Internal\Type\StringType;
 use SchrodtSven\P7WikiFoo\Internal\Type\ListType;
+use SchrodtSven\Html5_Lab\Kernel\Dry\IteratorTrait;
 
 class HtmlCollection
 {
-    
+    use IteratorTrait;
+        
 }
 
