@@ -1,6 +1,6 @@
 <?php declare(strict_types=1);
 /**
- *  Abstract action (here: “app”) controller
+ *  Abstract app (vulgo: “action”) controller
  * 
  * @author Sven Schrodt<sven@schrodt.club>
  * @link https://github.com/SchrodtSven/Html5_Lab
